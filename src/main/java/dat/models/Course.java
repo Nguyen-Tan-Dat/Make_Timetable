@@ -1,4 +1,9 @@
-package model;
+package dat.models;
+
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import java.awt.*;
 
 public class Course {
     private final String[] data;
@@ -11,6 +16,14 @@ public class Course {
         this.days = convertDays(data[6]);
         this.lessonStart = convertNumbers(data[7]);
         this.lessonsAmount = convertNumbers((data[8]));
+    }
+
+    public String[] getData() {
+        return data;
+    }
+
+    public String getName() {
+        return data[1];
     }
 
     public byte getSTC() {
@@ -27,30 +40,6 @@ public class Course {
 
     public byte[] getLessonAmount() {
         return lessonsAmount;
-    }
-
-    public static boolean isSchedule(Course[] list) {
-        boolean[][] table = new boolean[16][7];
-        for (byte i = 1; i < 10; i++)
-            for (byte j = 0; j < 7; j++)
-                table[i][j] = false;
-        for(byte i=0;i<7;i++)
-            table[0][i]=true;
-        for(int i=10;i<16;i++)
-            for (byte j = 0; j < 7; j++)
-                table[i][j] = true;
-        for (Course mh : list) {
-            byte[] days = mh.getDays();
-            for (byte i = 0; i < days.length; i++) {
-                byte lessonStart = mh.getLessonStart()[i];
-                byte lessonAmount = mh.getLessonAmount()[i];
-                byte day = days[i];
-                for (byte j = lessonStart; j < lessonStart + lessonAmount; j++)
-                    if (table[j][day]) return false;
-                    else table[j][day] = true;
-            }
-        }
-        return true;
     }
 
     @Override
@@ -71,6 +60,40 @@ public class Course {
         for (boolean b : dayStudy)
             if (b) number++;
         return number;
+    }
+
+    public static void show(Course[] list, String name, String[][] tableInfo) {
+        int r = 10, c = 7;
+        String[][] table = new String[r][c];
+        for (int i = 0; i < r; i++)
+            table[i][0] = 1 + i + "";
+        for (Course mh : list) {
+            byte[] days = mh.getDays();
+            for (byte i = 0; i < days.length; i++) {
+                byte lessonStart = mh.getLessonStart()[i];
+                byte lessonAmount = mh.getLessonAmount()[i];
+                byte day = days[i];
+                for (byte j = lessonStart; j < lessonStart + lessonAmount; j++) {
+                    table[j - 1][day + 1] = mh.getName();
+                }
+            }
+        }
+        TableModel model = new DefaultTableModel(table, new String[]{"Tiết", "Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy"});
+        JTable tableTKB = new JTable(model);
+        TableModel tableModelInfo=new DefaultTableModel(tableInfo,new String[]{"Mã MH","Tên MH","Nhóm MH","Số TC","SL mở","SL còn","Ngày học","Tiết BĐ","Số tiết","Giảng viên","Phòng học"});
+        JTable jTable=new JTable(tableModelInfo);
+        JFrame frame = new JFrame(name);
+        frame.setLayout(new BorderLayout(10,10));
+        JScrollPane boxTKB=new JScrollPane(tableTKB);
+        boxTKB.setPreferredSize(new Dimension(boxTKB.getWidth(),200));
+        frame.add(boxTKB,BorderLayout.NORTH);
+        JScrollPane boxInfoTable=new JScrollPane(jTable);
+        frame.add(boxInfoTable,BorderLayout.CENTER);
+        frame.setSize(700, 500);
+        frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setVisible(true);
     }
 
     public static byte convertDay(String day) {
@@ -95,4 +118,5 @@ public class Course {
             temp[i] = Byte.parseByte(list[i]);
         return temp;
     }
+
 }

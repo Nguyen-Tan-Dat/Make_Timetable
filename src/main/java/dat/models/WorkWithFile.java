@@ -1,4 +1,4 @@
-package model;
+package dat.models;
 
 import java.io.*;
 import java.util.ArrayList;
