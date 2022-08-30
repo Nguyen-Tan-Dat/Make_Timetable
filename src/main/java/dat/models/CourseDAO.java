@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class CourseDAO {
     WebDriver driver;
     public CourseDAO(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\nguye\\IntelliJIDEAProjects\\CourseSchedule\\src\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
 //        options.addArguments("headless");
         driver = new ChromeDriver(options);

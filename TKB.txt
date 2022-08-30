@@ -1,70 +1,8 @@
-Số tín chỉ 8
- Số ngày 2
+Số tín chỉ 4
+ Số ngày 1
 TKB-1
-	841044	 Lập trình hướng đối tượng	01	4	50	35	Hai Hai	4 1	2 3	N.T.H.Anh N.T.H.Anh	C.A101 C.E401
-	841111	 Phân tích thiết kế hướng đối tượng	02	4	95	59	Bảy Bảy	4 8	2 3	P.N.Minh P.N.Minh	C.E403 C.C105
+	841111	 Phân tích thiết kế hướng đối tượng	02	4	95	60	Bảy Bảy	4 8	2 3	P.N.Minh P.N.Minh	C.E403 C.C105
+Số tín chỉ 4
+ Số ngày 1
 TKB-2
-	841044	 Lập trình hướng đối tượng	02	4	50	36	Hai Hai	9 6	2 3	N.T.H.Anh N.T.H.Anh	C.A101 C.E401
-	841111	 Phân tích thiết kế hướng đối tượng	01	4	95	1	Hai Ba	4 8	2 3	P.N.Minh P.N.Minh	C.A105 C.C103
-TKB-3
-	841044	 Lập trình hướng đối tượng	02	4	50	36	Hai Hai	9 6	2 3	N.T.H.Anh N.T.H.Anh	C.A101 C.E401
-	841111	 Phân tích thiết kế hướng đối tượng	02	4	95	59	Bảy Bảy	4 8	2 3	P.N.Minh P.N.Minh	C.E403 C.C105
-TKB-4
-	841044	 Lập trình hướng đối tượng	03	4	50	46	Ba Ba	9 6	2 3	N.T.H.Anh N.T.H.Anh	C.A101 C.A314
-	841111	 Phân tích thiết kế hướng đối tượng	02	4	95	59	Bảy Bảy	4 8	2 3	P.N.Minh P.N.Minh	C.E403 C.C105
-TKB-5
-	841044	 Lập trình hướng đối tượng	04	4	50	44	Năm Năm	6 8	2 3	N.T.H.Anh N.T.H.Anh	C.A101 C.A303
-	841111	 Phân tích thiết kế hướng đối tượng	02	4	95	59	Bảy Bảy	4 8	2 3	P.N.Minh P.N.Minh	C.E403 C.C105
-TKB-6
-	841044	 Lập trình hướng đối tượng	05	4	50	38	Ba Ba	4 1	2 3	N.T.H.Anh N.T.H.Anh	C.A101 C.A314
-	841111	 Phân tích thiết kế hướng đối tượng	01	4	95	1	Hai Ba	4 8	2 3	P.N.Minh P.N.Minh	C.A105 C.C103
-TKB-7
-	841044	 Lập trình hướng đối tượng	05	4	50	38	Ba Ba	4 1	2 3	N.T.H.Anh N.T.H.Anh	C.A101 C.A314
-	841111	 Phân tích thiết kế hướng đối tượng	02	4	95	59	Bảy Bảy	4 8	2 3	P.N.Minh P.N.Minh	C.E403 C.C105
-TKB-8
-	841044	 Lập trình hướng đối tượng	06	4	50	48	Sáu Sáu	4 1	2 3	N.T.Sang N.T.Sang	C.A102 C.E306
-	841111	 Phân tích thiết kế hướng đối tượng	02	4	95	59	Bảy Bảy	4 8	2 3	P.N.Minh P.N.Minh	C.E403 C.C105
-TKB-9
-	841044	 Lập trình hướng đối tượng	07	4	50	44	Tư Tư	1 3	2 3	N.T.Sang N.T.Sang	C.A102 C.E306
-	841111	 Phân tích thiết kế hướng đối tượng	02	4	95	59	Bảy Bảy	4 8	2 3	P.N.Minh P.N.Minh	C.E403 C.C105
-TKB-10
-	841044	 Lập trình hướng đối tượng	08	4	50	44	Hai Hai	4 1	2 3	N.T.Sang N.T.Sang	C.A102 C.E306
-	841111	 Phân tích thiết kế hướng đối tượng	02	4	95	59	Bảy Bảy	4 8	2 3	P.N.Minh P.N.Minh	C.E403 C.C105
-TKB-11
-	841044	 Lập trình hướng đối tượng	09	4	50	40	Sáu Sáu	9 6	2 3	N.T.Sang N.T.Sang	C.A102 C.E401
-	841111	 Phân tích thiết kế hướng đối tượng	02	4	95	59	Bảy Bảy	4 8	2 3	P.N.Minh P.N.Minh	C.E403 C.C105
-TKB-12
-	841044	 Lập trình hướng đối tượng	12	4	50	47	Ba Ba	6 8	2 3	Đ.N.N.Loan Đ.N.N.Loan	C.A106 C.E401
-	841111	 Phân tích thiết kế hướng đối tượng	02	4	95	59	Bảy Bảy	4 8	2 3	P.N.Minh P.N.Minh	C.E403 C.C105
-TKB-13
-	841044	 Lập trình hướng đối tượng	13	4	50	46	Năm Năm	9 6	2 3	Đ.N.N.Loan Đ.N.N.Loan	C.A102 C.E401
-	841111	 Phân tích thiết kế hướng đối tượng	02	4	95	59	Bảy Bảy	4 8	2 3	P.N.Minh P.N.Minh	C.E403 C.C105
-TKB-14
-	841044	 Lập trình hướng đối tượng	14	4	50	47	Năm Năm	9 6	2 3	P.T.T.Trang P.T.T.Trang	C.A111 C.E204
-	841111	 Phân tích thiết kế hướng đối tượng	02	4	95	59	Bảy Bảy	4 8	2 3	P.N.Minh P.N.Minh	C.E403 C.C105
-Số tín chỉ 8
- Số ngày 2
-TKB-1
-	841044	 Lập trình hướng đối tượng	04	4	50	44	Năm Năm	6 8	2 3	N.T.H.Anh N.T.H.Anh	C.A101 C.A303
-	841111	 Phân tích thiết kế hướng đối tượng	01	4	95	1	Hai Ba	4 8	2 3	P.N.Minh P.N.Minh	C.A105 C.C103
-TKB-2
-	841044	 Lập trình hướng đối tượng	06	4	50	48	Sáu Sáu	4 1	2 3	N.T.Sang N.T.Sang	C.A102 C.E306
-	841111	 Phân tích thiết kế hướng đối tượng	01	4	95	1	Hai Ba	4 8	2 3	P.N.Minh P.N.Minh	C.A105 C.C103
-TKB-3
-	841044	 Lập trình hướng đối tượng	07	4	50	44	Tư Tư	1 3	2 3	N.T.Sang N.T.Sang	C.A102 C.E306
-	841111	 Phân tích thiết kế hướng đối tượng	01	4	95	1	Hai Ba	4 8	2 3	P.N.Minh P.N.Minh	C.A105 C.C103
-TKB-4
-	841044	 Lập trình hướng đối tượng	09	4	50	40	Sáu Sáu	9 6	2 3	N.T.Sang N.T.Sang	C.A102 C.E401
-	841111	 Phân tích thiết kế hướng đối tượng	01	4	95	1	Hai Ba	4 8	2 3	P.N.Minh P.N.Minh	C.A105 C.C103
-TKB-5
-	841044	 Lập trình hướng đối tượng	10	4	50	48	Bảy Bảy	4 1	2 3	P.T.Huynh P.T.Huynh	C.A109 C.A301
-	841111	 Phân tích thiết kế hướng đối tượng	01	4	95	1	Hai Ba	4 8	2 3	P.N.Minh P.N.Minh	C.A105 C.C103
-TKB-6
-	841044	 Lập trình hướng đối tượng	11	4	50	46	Bảy Bảy	9 6	2 3	P.T.Huynh P.T.Huynh	C.A109 C.A301
-	841111	 Phân tích thiết kế hướng đối tượng	01	4	95	1	Hai Ba	4 8	2 3	P.N.Minh P.N.Minh	C.A105 C.C103
-TKB-7
-	841044	 Lập trình hướng đối tượng	13	4	50	46	Năm Năm	9 6	2 3	Đ.N.N.Loan Đ.N.N.Loan	C.A102 C.E401
-	841111	 Phân tích thiết kế hướng đối tượng	01	4	95	1	Hai Ba	4 8	2 3	P.N.Minh P.N.Minh	C.A105 C.C103
-TKB-8
-	841044	 Lập trình hướng đối tượng	14	4	50	47	Năm Năm	9 6	2 3	P.T.T.Trang P.T.T.Trang	C.A111 C.E204
-	841111	 Phân tích thiết kế hướng đối tượng	01	4	95	1	Hai Ba	4 8	2 3	P.N.Minh P.N.Minh	C.A105 C.C103
+	841111	 Phân tích thiết kế hướng đối tượng	01	4	95	Hết	Hai Ba	4 8	2 3	P.N.Minh P.N.Minh	C.E402 C.C103

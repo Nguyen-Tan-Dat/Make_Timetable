@@ -26,8 +26,7 @@ public class CoursesController {
         }
     }
 
-    public static void searchValidTimetableOnline() {
-        var listCourses = MainFrame.existingList;
+    public static void searchValidTimetableOnline(ArrayList listCourses) {
         listCompleted = new ArrayList<>();
         for (int i = 0; i < 6; i++)
             listCompleted.add(new ArrayList<>());
