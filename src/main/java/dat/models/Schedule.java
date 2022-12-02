@@ -1,7 +1,7 @@
 package dat.models;
 
 public class Schedule {
-    private Course[] courses;
+    private final Course[] courses;
 
     public Schedule(Course[] courses) {
         this.courses = courses;
