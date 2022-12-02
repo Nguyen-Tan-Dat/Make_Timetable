@@ -7,12 +7,14 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.ArrayList;
 
+import static java.lang.Thread.sleep;
+
 public class CourseDAO {
     WebDriver driver;
     public CourseDAO(){
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("headless");
+        options.addArguments("headless");
         driver = new ChromeDriver(options);
         driver.get("http://thongtindaotao.sgu.edu.vn");
         driver.findElement(By.id("ctl00_ContentPlaceHolder1_ctl00_ucDangNhap_txtTaiKhoa")).sendKeys("3118410076");
@@ -23,6 +25,11 @@ public class CourseDAO {
     public ArrayList<Course> listCourse(String courseID){
         driver.findElement(By.id("txtMaMH1")).sendKeys(courseID);
         driver.findElement(By.id("btnLocTheoMaMH1")).click();
+        try {
+            sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         driver.getPageSource();
         var listCourse = driver.findElement(By.id("divTDK"));
         var tds = listCourse.findElements(By.tagName("td"));
@@ -45,4 +52,5 @@ public class CourseDAO {
         }
         return result;
     }
+
 }

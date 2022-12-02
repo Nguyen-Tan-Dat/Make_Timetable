@@ -1,10 +1,5 @@
 package dat.models;
 
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
-import java.awt.*;
-
 public class Course {
     private final String[] data;
     private final byte[] days;
@@ -60,40 +55,6 @@ public class Course {
         for (boolean b : dayStudy)
             if (b) number++;
         return number;
-    }
-
-    public static void show(Course[] list, String name, String[][] tableInfo) {
-        int r = 10, c = 7;
-        String[][] table = new String[r][c];
-        for (int i = 0; i < r; i++)
-            table[i][0] = 1 + i + "";
-        for (Course mh : list) {
-            byte[] days = mh.getDays();
-            for (byte i = 0; i < days.length; i++) {
-                byte lessonStart = mh.getLessonStart()[i];
-                byte lessonAmount = mh.getLessonAmount()[i];
-                byte day = days[i];
-                for (byte j = lessonStart; j < lessonStart + lessonAmount; j++) {
-                    table[j - 1][day + 1] = mh.getName();
-                }
-            }
-        }
-        TableModel model = new DefaultTableModel(table, new String[]{"Tiết", "Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy"});
-        JTable tableTKB = new JTable(model);
-        TableModel tableModelInfo=new DefaultTableModel(tableInfo,new String[]{"Mã MH","Tên MH","Nhóm MH","Số TC","SL mở","SL còn","Ngày học","Tiết BĐ","Số tiết","Giảng viên","Phòng học"});
-        JTable jTable=new JTable(tableModelInfo);
-        JFrame frame = new JFrame(name);
-        frame.setLayout(new BorderLayout(10,10));
-        JScrollPane boxTKB=new JScrollPane(tableTKB);
-        boxTKB.setPreferredSize(new Dimension(boxTKB.getWidth(),200));
-        frame.add(boxTKB,BorderLayout.NORTH);
-        JScrollPane boxInfoTable=new JScrollPane(jTable);
-        frame.add(boxInfoTable,BorderLayout.CENTER);
-        frame.setSize(700, 500);
-        frame.setVisible(true);
-        frame.setLocationRelativeTo(null);
-        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        frame.setVisible(true);
     }
 
     public static byte convertDay(String day) {

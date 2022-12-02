@@ -1,16 +1,36 @@
 package dat.models;
 
 
-import dat.controls.MainFrame;
-
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import java.awt.*;
 import java.util.ArrayList;
 
 public class CoursesController {
+    private final CourseDAO dao = new CourseDAO();
+
+    private ArrayList subjects = new ArrayList<>();
+
+    private static ArrayList<ArrayList<Course[]>> listCompleted;
+
     public CoursesController() {
     }
 
+    public ArrayList getData() {
+        return subjects;
+    }
 
-    private static ArrayList<ArrayList<Course[]>> listCompleted;
+    public boolean addSubject(String subjectID) {
+        var subject = dao.listCourse(subjectID);
+        if (subject != null) {
+            if (subject.size() > 0) {
+                subjects.add(0, subject);
+                return true;
+            }
+        }
+        return false;
+    }
 
     private static void arrange(ArrayList<ArrayList<Course>> listCourses, Course[] listAction, int indexList) {
         if (indexList == listAction.length) {
@@ -26,7 +46,7 @@ public class CoursesController {
         }
     }
 
-    public static void searchValidTimetableOnline(ArrayList listCourses) {
+    public static void test(ArrayList listCourses) {
         listCompleted = new ArrayList<>();
         for (int i = 0; i < 6; i++)
             listCompleted.add(new ArrayList<>());
@@ -52,13 +72,60 @@ public class CoursesController {
                             listInfo[s][o] = k.getData()[o];
                         s++;
                     }
-                    Course.show(j, tkb, listInfo);
+                    show(j, tkb, listInfo);
                 }
             } else numDay++;
         }
         System.out.println(rs);
-        WorkWithFile work = new WorkWithFile();
-        work.overwrite("TKB.txt", rs.toString());
+        WorkWithFile file = new WorkWithFile();
+        file.overwrite("TKB.txt", rs.toString());
     }
 
+    private static ArrayList<JFrame> schedules = new ArrayList<>();
+
+    public static void show(Course[] list, String name, String[][] tableInfo) {
+        int r = 10, c = 7;
+        String[][] table = new String[r][c];
+        for (int i = 0; i < r; i++)
+            table[i][0] = 1 + i + "";
+        for (Course mh : list) {
+            byte[] days = mh.getDays();
+            for (byte i = 0; i < days.length; i++) {
+                byte lessonStart = mh.getLessonStart()[i];
+                byte lessonAmount = mh.getLessonAmount()[i];
+                byte day = days[i];
+                for (byte j = lessonStart; j < lessonStart + lessonAmount; j++) {
+                    table[j - 1][day + 1] = mh.getName();
+                }
+            }
+        }
+        TableModel model = new DefaultTableModel(table, new String[]{"Tiết", "Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy"});
+        JTable tableTKB = new JTable(model);
+        TableModel tableModelInfo = new DefaultTableModel(tableInfo, new String[]{"Mã MH", "Tên MH", "Nhóm MH", "Số TC", "SL mở", "SL còn", "Ngày học", "Tiết BĐ", "Số tiết", "Giảng viên", "Phòng học"});
+        JTable jTable = new JTable(tableModelInfo);
+        JFrame frame = new JFrame(name);
+        frame.setLayout(new BorderLayout(10, 10));
+        JScrollPane boxTKB = new JScrollPane(tableTKB);
+        boxTKB.setPreferredSize(new Dimension(boxTKB.getWidth(), 200));
+        frame.add(boxTKB, BorderLayout.NORTH);
+        JScrollPane boxInfoTable = new JScrollPane(jTable);
+        frame.add(boxInfoTable, BorderLayout.CENTER);
+        frame.setSize(700, 500);
+        frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setVisible(true);
+        schedules.add(frame);
+    }
+
+    public static void closeSchedules() {
+        for (var i : schedules) {
+            i.dispose();
+        }
+        schedules = new ArrayList<>();
+    }
+
+    public void arrangeCourse() {
+        test(this.subjects);
+    }
 }

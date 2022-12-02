@@ -1,8 +1,16 @@
-Số tín chỉ 4
- Số ngày 1
+Số tín chỉ 6
+ Số ngày 3
 TKB-1
-	841111	 Phân tích thiết kế hướng đối tượng	02	4	95	60	Bảy Bảy	4 8	2 3	P.N.Minh P.N.Minh	C.E403 C.C105
-Số tín chỉ 4
- Số ngày 1
+	832058	 Tài chính doanh nghiệp 1	01	3	100	100	Ba	2	4	V.T.T.Vân	C.C106
+	832057	 Kế toán Mỹ	01	3	120	120	Hai Sáu Ba	6 6 6	3 3 3	P.T.Trung P.T.Trung P.T.Trung	1.A101 C.C106 C.E603
 TKB-2
-	841111	 Phân tích thiết kế hướng đối tượng	01	4	95	Hết	Hai Ba	4 8	2 3	P.N.Minh P.N.Minh	C.E402 C.C103
+	832058	 Tài chính doanh nghiệp 1	05	3	100	100	Ba	3	3	T.N.T.Vy	2.B205
+	832057	 Kế toán Mỹ	01	3	120	120	Hai Sáu Ba	6 6 6	3 3 3	P.T.Trung P.T.Trung P.T.Trung	1.A101 C.C106 C.E603
+Số tín chỉ 6
+ Số ngày 3
+TKB-3
+	832058	 Tài chính doanh nghiệp 1	03	3	100	100	Tư	2	4	V.T.T.Vân	C.C106
+	832057	 Kế toán Mỹ	01	3	120	120	Hai Sáu Ba	6 6 6	3 3 3	P.T.Trung P.T.Trung P.T.Trung	1.A101 C.C106 C.E603
+TKB-4
+	832058	 Tài chính doanh nghiệp 1	04	3	100	100	Năm Sáu	1 1	2 2	T.N.T.Vy T.N.T.Vy	2.B205 2.B204
+	832057	 Kế toán Mỹ	01	3	120	120	Hai Sáu Ba	6 6 6	3 3 3	P.T.Trung P.T.Trung P.T.Trung	1.A101 C.C106 C.E603
